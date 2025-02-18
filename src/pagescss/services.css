@@ -1,0 +1,131 @@
+/* Container chính */
+.services-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  /* Tiêu đề */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    font-family: "Cormorant Garamond", serif;
+
+  }
+  
+  .subtitle {
+    color: #555;
+    margin-bottom: 2rem;
+    font-family: "Cormorant Garamond", serif;
+
+  }
+  
+  /* Grid để chia thành 2 dịch vụ trên mỗi hàng */
+  .service-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Các item dịch vụ */
+  .service-item {
+    display: flex;
+    flex-wrap: wrap;
+   height: 250px;
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hình ảnh dịch vụ */
+  .service-img {
+    width: 30%;
+   
+  }
+  
+  .service-img__img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Phần text của dịch vụ */
+  /* Phần text của dịch vụ */
+/* Phần text của dịch vụ */
+.service-text {
+    width: 70%;
+    padding-left: 10px; /* Khoảng cách bên trái */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Căn lề trái */
+  }
+  
+  .service-text__title {
+    font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem; /* Khoảng cách dưới tiêu đề */
+  text-transform: uppercase; /* Chữ in hoa */
+  letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
+  }
+  
+  .service-text__desc {
+    color: #555; /* Màu chữ nhẹ hơn */
+    font-size: 17px; /* Giảm kích thước chữ của mô tả */
+    line-height: 1.6;
+    margin-top: 1rem;
+    text-align: left; /* Căn lề trái cho phần mô tả */
+    transition: color 0.3s ease;
+  }
+  
+
+  
+  /* Responsive cho các thiết bị nhỏ */
+/* Responsive cho các thiết bị nhỏ */
+@media (max-width: 768px) {
+    .services-container{
+        width: 120%;
+       
+        margin-left: -30px;
+    }
+    .service-block {
+        grid-template-columns: 1fr; /* Chỉ 1 cột trên màn hình nhỏ */
+    }
+
+    .service-item {
+        flex-direction: column; /* Sắp xếp hình ảnh và văn bản theo chiều dọc */
+        padding: 10px; /* Giảm padding cho nhỏ gọn hơn */
+        height: auto; /* Thay đổi chiều cao linh hoạt */
+    }
+
+    .service-img {
+        width: 20%; /* Hình ảnh chiếm 100% chiều rộng */
+        margin-bottom: 1rem; /* Khoảng cách dưới hình ảnh */
+    }
+
+    .service-text {
+     
+        width: 100%; /* Văn bản cũng chiếm 100% chiều rộng */
+        padding-left: 0;
+    }
+
+    .service-text__title {
+      margin-top: -70px;
+      margin-left: 70px;
+        font-size: 1rem; /* Giảm kích thước tiêu đề trên di động */
+    }
+
+    .service-text__desc {
+        font-size: 15px; /* Giảm kích thước chữ của mô tả */
+    }
+}
+  

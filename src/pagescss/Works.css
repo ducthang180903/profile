@@ -1,0 +1,96 @@
+.myworks{
+    width: 100%;
+    height: 100%;
+  
+}
+.textmyworks{
+    text-align: center;
+    font-size: 45px;
+    font-family: "Cormorant Garamond", serif;
+}
+.blokmyworks{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tự động chia cột */
+    gap: 20px; /* Khoảng cách giữa các khối */
+    padding: 20px;
+  
+}
+.blokmyworks1 {
+    background-color: #ff6b6b; /* Màu nền tùy chỉnh */
+    color: white;
+    padding: 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px; /* Bo góc cho đẹp */
+    position: relative;
+  overflow: hidden;
+
+  cursor: pointer;
+  }
+  .imgmyworks{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Bo góc cho đẹp */
+    transition: transform 0.4s ease-in-out;
+   
+  }
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(254, 166, 166, 0.6);
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    padding: 20px;
+  }
+  
+  .overlay-content {
+    color: white;
+    text-align: left;
+  }
+  
+  .overlay-content h3 {
+    font-size: 22px;
+    margin: 0;
+  }
+  
+  .overlay-content p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .btn-view {
+    background: #ff5f5f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-view:hover {
+    background: #ff3838;
+  }
+  
+  .blokmyworks1:hover .imgmyworks {
+    transform: scale(1.1);
+  }
+  
+  .blokmyworks1:hover .overlay {
+    opacity: 1;
+  }
+  @media (max-width: 768px) {
+    .textmyworks{
+      font-size: 29px;
+      font-family: "Cormorant Garamond", serif;
+    }
+  }

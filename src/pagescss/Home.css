@@ -1,0 +1,306 @@
+/* Home.css */
+.home-container {
+    display: flex;
+   height: 750px;
+  padding: 100px 20px;
+  background-color: #25262f;
+    width: 100%;
+  }
+  
+
+  
+  .text {
+    text-align: left;  /* Căn chữ sang trái */
+    margin-left: 100px; /* Cách lề trái 100px */
+    max-width: 500px;   /* Giới hạn độ rộng */
+    margin-top: 100px;
+  }
+  
+  .hello-text {
+    font-size: 18px;
+    color: #f05454;
+    margin-bottom: 10px;
+  }
+  
+  .name {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .passion {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #f05454;
+    font-weight: bold;
+    display: inline-block;
+    border-right: 3px solid #f05454;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+  }
+  
+  .btn-hello {
+    background: #f05454;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .social-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .btn-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  /* Icon màu chuẩn */
+  .icon {
+    font-size: 24px;
+  }
+  
+  /* Facebook */
+  .fb {
+    background-color: #1877f2;
+  }
+  
+  .fb-icon {
+    color: #ffffff;
+  }
+  
+  /* Zalo */
+  .zalo {
+    background-color: #0084ff;
+    
+  }
+
+  
+  /* TikTok */
+  .tiktok {
+    background-color: #000;
+  }
+  
+  .tiktok-icon {
+    color: #ff0050; /* Màu TikTok */
+  }
+  
+  /* Instagram */
+  .instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
+  
+  .insta-icon {
+    color: white;
+  }
+  
+  /* Hover hiệu ứng */
+  .btn-social:hover {
+    opacity: 0.8;
+  }
+  
+  .hero-image {
+    position: relative; /* Để các phần tử con có thể dùng absolute */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+  }
+  
+  /* Vòng tròn phát sáng */
+  .boderimg {
+    position: absolute;
+    
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    animation: pulse 2s infinite alternate ease-in-out;
+    left: 250px;
+    top: -50px;
+  }
+  .boderimg0 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+ 
+    animation: pulse 2s infinite alternate ease-in-out;
+  
+
+  }
+
+  
+  /* Ảnh logo nằm trên cùng */
+  .logo1 {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    position: relative; /* Giữ ảnh nằm trên cùng */
+    margin-left: 300px;
+    margin-top: 50px;
+   border-radius: 50%
+  }
+  
+  /* Hiệu ứng phát sáng */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+  }
+  
+  
+  /* Social Icons */
+  .social-icons {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+  
+  .social-icons i {
+    font-size: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  /* Media Queries for mobile responsiveness */
+  @media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+        height: 700px;
+        margin-top: 100px
+    }
+
+    .text-container {
+        width: 100%;
+        padding: 0 20px;  /* Thêm padding cho các thành phần bên trong */
+        margin-top: 20px;
+    }
+
+    .text {
+        margin-left: 0; /* Hủy bỏ margin bên trái */
+        margin-top: 20px;
+        font-size: 16px; /* Giảm kích thước chữ */
+        max-width: none; /* Không giới hạn chiều rộng */
+        text-align: center;
+    }
+
+    .name {
+        font-size: 40px; /* Giảm kích thước chữ trên màn hình nhỏ */
+    }
+
+    .btn-hello {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 300px; /* Giảm chiều cao của hero-image */
+    }
+
+    .boderimg, .boderimg0 {
+        width: 600px;
+        height: 600px;
+        left: 50px;
+        top: -250px;
+    }
+
+    .logo1 {
+        width: 300px;
+        height: 300px;
+        margin-left: 0;
+        position: relative;
+    }
+.boderimg{
+  display: none
+}
+.boderimg0{
+  display: none
+}
+    .social-icons {
+        right: 10px;
+        top: auto;
+        bottom: 10px; /* Đặt các biểu tượng xã hội ở dưới */
+    }
+    .social-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .btn-social {
+      width: 80%; /* Nút rộng 80% màn hình */
+      justify-content: center; /* Căn giữa icon & text */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        padding: 0;
+    }
+
+    .text {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .btn-hello {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .boderimg, .boderimg0 {
+        width: 500px;
+        height: 500px;
+        top: -150px;
+    }
+
+    .logo1 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .social-icons {
+        bottom: 10px;
+        right: 5px;
+    }
+    .btn-social {
+      font-size: 14px; /* Giảm kích thước chữ */
+      padding: 8px 15px; /* Giảm padding */
+    }
+  
+    .icon {
+      font-size: 20px; /* Giảm kích thước icon */
+    }
+}

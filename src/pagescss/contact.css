@@ -1,0 +1,225 @@
+/* Định nghĩa các style cơ bản cho container và form */
+.contact-container {
+ 
+    justify-content: center;
+    align-items: center;
+width: 100%;
+   
+    padding: 0 20px;
+  }
+  
+  .contact-form {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .contact-form0 {
+display: flex;
+  }
+  
+  .contact-title {
+    font-size: 1.2rem;
+    color: #930606;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  .contact-description {
+  font-size: 40px;
+    color: #555;
+    margin-left: 300px;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .submit-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-button:active {
+    background-color: #003f7d;
+  }
+  
+  /* Thêm style cho các icon mạng xã hội */
+  .social-icons {
+    position: relative; /* Thay đổi từ fixed thành relative hoặc static */
+    bottom: 0;
+    right: 0;
+    margin-top: 20px;
+  }
+  
+ /* Căn chỉnh phần social-links */
+.social-links {
+    text-align: center; /* Căn giữa nội dung */
+    margin-top: 30px; /* Khoảng cách trên */
+   
+    width: 100%;
+  }
+  
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 20px;
+  }
+  
+  .contact-item {
+    display: flex;
+   
+    gap: 1rem;
+  }
+  
+  .contacticon {
+    background-color: #e3342f;
+    color: white;
+    border-radius: 30%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon i {
+    font-size: 1.5rem;
+  }
+  .contact-text {
+text-align: left;
+  }
+  .contact-text h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .contact-text p {
+    margin: 0;
+  }
+
+
+  
+
+  
+  /* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .contact-container{
+        width: 100%;
+       
+    }
+
+    /* Đưa form và thông tin liên hệ xếp dọc thay vì ngang */
+    .contact-form0 {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    /* Căn chỉnh lại phần chứa form */
+    .contact-form {
+      max-width: 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+      padding: 20px; /* Giảm padding cho gọn */
+      margin-top: 20px;
+    }
+  
+    /* Căn giữa chữ mô tả */
+    .contact-title,
+    .contact-description {
+      text-align: center;
+      font-size: 1rem;
+      margin-left: 0;
+    }
+  
+    /* Căn chỉnh thông tin liên hệ */
+    .contact-info {
+      width: 100%;
+     text-align: left;
+   
+    }
+  
+    .contact-item {
+      flex-direction: row; /* Để icon và chữ nằm ngang */
+     
+    }
+  
+    .contacticon {
+      width: 40px; 
+      height: 40px;
+      padding: 0.8rem;
+      font-size: 1rem;
+    }
+    .contact-text{
+       margin-top: -8px;
+      }
+    /* Giảm kích thước chữ */
+    .contact-text h3 {
+      font-size: 1rem;
+    }
+  
+    .contact-text p {
+      font-size: 0.9rem;
+    }
+  
+    /* Input và textarea thu gọn cho mobile */
+    .form-group input,
+    .form-group textarea {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    /* Nút gửi nhỏ hơn */
+    .submit-button {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+  

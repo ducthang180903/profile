@@ -1,0 +1,255 @@
+.about {
+    width: 100%;
+    height: 600px;
+    
+    display: flex;
+  
+}
+
+.aboutimg {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Ảnh bắt đầu ở bên trái */
+.aboutlogo {
+    width: 100%;
+    height: 560px;
+    opacity: 0;
+   
+    transform: translateX(-100%) rotate(10deg); /* Ban đầu ảnh nằm ngoài màn hình và xoay nhẹ */
+    filter: blur(10px); /* Làm mờ ảnh khi bắt đầu */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out, filter 1s ease-out;
+    will-change: opacity, transform, filter;
+    border-radius: 20px;
+}
+
+/* Khi ảnh vào viewport */
+.aboutlogo.in-viewport {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg); /* Di chuyển ảnh vào vị trí ban đầu và xoay lại */
+    filter: blur(0); /* Xoá mờ khi ảnh vào viewport */
+    transition: opacity 1.5s ease-in, transform 1.5s ease-in, filter 1s ease-in;
+}
+
+/* Khi ảnh thoát khỏi viewport */
+.aboutlogo.out-of-viewport {
+    opacity: 0;
+    transform: translateX(100%) rotate(-10deg); /* Di chuyển ảnh ra bên phải và xoay ngược lại */
+    filter: blur(5px); /* Làm mờ khi ảnh biến mất */
+    transition: opacity 1.5s ease-in, transform 1.5s ease-in, filter 1s ease-in;
+}
+
+/* Keyframes cho hiệu ứng xuất hiện và biến mất */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotate(10deg); /* Ảnh xoay và mờ */
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg); /* Ảnh vào với độ mờ giảm dần */
+        filter: blur(0);
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%) rotate(-10deg); /* Ảnh xoay ra và mờ dần */
+        filter: blur(5px);
+    }
+}
+
+/* Áp dụng animation cho khi phần tử vào viewport */
+.aboutlogo.in-viewport {
+    animation: slideInLeft 1.5s ease-in-out forwards;
+}
+
+/* Áp dụng animation cho khi phần tử ra khỏi viewport */
+.aboutlogo.out-of-viewport {
+    animation: slideOutRight 1.5s ease-in-out forwards;
+}
+
+/* Thêm một chút shadow để làm ảnh nổi bật hơn khi vào viewport */
+.aboutlogo.in-viewport {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    
+}
+.abouttext {
+   
+    width: 60%;
+    justify-content: space-between;
+    align-items: flex-start;
+ margin-left: 20px;
+    font-family: 'Arial', sans-serif; /* Phông chữ dễ nhìn */
+  }
+  
+  .abouttext0 {
+    width: 100%;
+   
+  }
+  
+  .abouttext1 {
+    width: 100%;
+  
+    display: flex;
+    text-align: left;
+  }
+  
+  .textabout {
+    font-size: 24px;
+    font-family: "Cormorant Garamond", serif;
+    text-align: left; /* Căn lề trái */
+    color: #ff0000;
+    margin-bottom: 10px;
+  }
+  
+  .textabout1 {
+    font-size: 60px;
+    font-family: "Cormorant Garamond", serif;
+    text-align: left; /* Căn lề trái */
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .textabout2 {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    text-align: left !important; /* Căn lề trái với ưu tiên cao */
+    color: #666;
+    margin: 0;
+    padding: 0;
+  }
+.aboutthongtin{
+    width: 25%;
+}
+/* Phần tử cha */
+.aboutthongtin1 {
+    width: 25%;
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    align-items: flex-start; /* Căn lề trái tất cả các phần tử con */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Đoạn văn bản */
+  .nameabout1 {
+    font-size: 16px; /* Cỡ chữ */
+    color: #333; /* Màu chữ */
+  margin-top: 18px;
+    text-align: left; /* Căn lề trái */
+  }
+  .nameabout2, 
+  .nameabout3,
+  .nameabout4 {
+    font-size: 16px; /* Cỡ chữ */
+    color: #333; /* Màu chữ */
+  margin-top: 18px;
+    text-align: left; /* Căn lề trái */
+  }
+  
+.aboutthongtin2{
+    width: 25%;
+  
+}
+.aboutthongtin3{
+    width: 25%;
+ 
+}
+ .nameabout{
+    margin-top: 20px;
+    font-family: "Cormorant Garamond", serif;
+ }
+/* Responsive */
+
+
+@media only screen and (max-width: 768px) {
+    .about {
+       
+      flex-direction: column;
+     margin-left: -30px;
+      height: 100%;
+    }
+  
+    .aboutimg {
+      width: 100%;
+      margin-bottom: 20px;
+      margin-left: 30px;
+    }
+  
+    .aboutlogo {
+      width: 100%;
+    }
+  
+    .abouttext {
+      width: 100%;
+      text-align: center;
+    }
+  .textabout1{
+    font-size: 50px;
+  }
+  .abouttext1 {
+    flex-direction: column; /* Đặt các phần tử theo chiều dọc khi màn hình nhỏ */
+    align-items: flex-start;
+  }
+
+  .aboutthongtin, 
+  .aboutthongtin2,
+  .aboutthongtin3 {
+    width: 100%; /* Chiếm 100% chiều rộng khi màn hình nhỏ */
+  }
+  .aboutthongtin1{
+    width: 50%; /* Chiếm 100% chiều rộng khi màn hình nhỏ */
+    margin-top: -175px;
+    margin-left: 170px;
+    
+  
+  }
+  .aboutthongtin3{
+    width: 50%; /* Chiếm 100% chiều rộng khi màn hình nhỏ */
+    margin-top: -175px;
+    margin-left: 140px;
+  
+    
+  }
+    .nameabout,
+    .nameabout1 {
+      font-size: 14px;
+      
+    }
+    .nameabout2,
+    .nameabout3,
+    .nameabout4 {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .aboutlogo {
+      width: 100%;
+    }
+  
+    .abouttext {
+      padding-left: 0;
+    }
+  
+    .abouttext0 h5 {
+      font-size: 18px;
+    }
+  
+    .abouttext1 p {
+      font-size: 14px;
+    }
+  }

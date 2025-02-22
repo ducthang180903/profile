@@ -2,7 +2,7 @@
 .skill-container {
     text-align: center;
     padding: 50px 20px;
-   
+
     font-family: 'Arial', sans-serif;
   }
   
@@ -29,14 +29,15 @@
     align-items: center;
    width: 100%;
     margin: 0 auto;
+  
   }
   
   /* Card từng skill */
   .skill-card {
-    background: white;
+    background: rgb(255, 255, 255);
     border: 2px solid #ddd;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;

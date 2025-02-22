@@ -92,7 +92,8 @@ function App() {
         </section>
        
       </div>
-      <footer className="footer">© 2025 Welcome to Đức Thắng profile ❤️</footer>
+      <footer className="footer">© 2025 Welcome to Đức Thắng profile
+         ❤️</footer>
     </div>
   );
 }
